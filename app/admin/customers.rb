@@ -16,4 +16,13 @@ ActiveAdmin.register Customer do
   # end
   
   remove_filter :image_attachment, :image_blob
+
+  form do |f|
+    f.semantic_errors
+    f.inputs
+    f.inputs do
+      f.input :image, as: :file, hint: f.object.image.attached? ? image_tag(f.object.image, size: '200x200') : ''
+    end
+    f.actions
+  end
 end
