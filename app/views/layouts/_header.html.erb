@@ -1,0 +1,14 @@
+<header class='container-fluid bg-secondary text-white'>
+    <nav class='navbar px-0'>
+        <ul class='container-fluid mb-0'>
+            <li class='navbar py-2'>
+                <%= link_to "All Customers", '/', class: 'nav-item me-3' %>
+                <%= link_to "Sorted", '/customers/alphabetized', class: 'nav-item  me-3' %>
+                <%= link_to "No Email", '/customers/missing_email', class: 'nav-item' %>
+            </li>
+            <li class='navbar py-2'>
+                <%= link_to "Admin", '/admin', class: 'nav-item' %>
+            </li>
+        </ul>
+    </nav>
+</header>

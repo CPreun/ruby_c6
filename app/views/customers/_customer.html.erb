@@ -1,0 +1,13 @@
+<div >
+    <div class="card p-0" style="width: 18rem;">
+        <% if customer.image.attached? %>
+            <%= image_tag(customer.image, size: "200x200", class: "card-img-top") %>
+        <% end %>
+        <div class="card-body">
+            <h2 class="title"><%= customer.full_name %></h2>
+            <p class="card-text">Phone Number: <%= customer.phone_number %></p>
+            <p class="card-text">Email: <%= customer.email_address %></p>
+            <p class="card-text">Notes: <%= customer.notes %></p>
+        </div>
+    </div>
+</div>

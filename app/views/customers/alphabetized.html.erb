@@ -1,0 +1,8 @@
+<h1>Customers Alphabetized</h1>
+<div class="row row-cols-auto g-4">
+<% if @customers.any? %>
+    <% for customer in @customers %>
+        <%= render "customer", customer: customer %>
+    <% end %>
+<% end %>
+</div>
